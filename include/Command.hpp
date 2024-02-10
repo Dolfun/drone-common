@@ -2,15 +2,15 @@
 #include "Serialization.hpp"
 #include <cstdint>
 
-enum class CommandType : std::uint8_t {
-  ping = 0,
+enum class CommandCategory_t : std::uint8_t {
+  ping = 1,
 };
 
-using IDType = std::uint32_t;
-using ArgType = std::uint8_t;
+using Id_t = std::uint32_t;
+using Arg_t = std::uint8_t;
 
 struct Command {
-  IDType id;
-  CommandType type;
-  ArgType arg;
+  Id_t id;
+  CommandCategory_t type;
+  Arg_t arg;
 };
